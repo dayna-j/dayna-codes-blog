@@ -23,7 +23,7 @@ jobs:
         
     steps:
       - name: Git clone our repository
-        id: wait-for-finished
+#         id: wait-for-finished
         uses: actions/checkout@v2
             
       - name: Create ZIP deployment package
@@ -56,7 +56,7 @@ jobs:
     
     steps:
       - name: Configure AWS Credentials
-        if: steps.wait-for-finished.outputs.conclusion == 'success'
+#         if: steps.wait-for-finished.outputs.conclusion == 'success'
         uses: aws-actions/configure-aws-credentials@v1
         with:
             role-to-assume: arn:aws:iam::163578322949:role/github-actions-elasticbeanstalk-role
