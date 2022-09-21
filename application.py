@@ -16,7 +16,7 @@ def hello_earth():
 def hello_mars():
     return "<p>Hello, mars!</p>"
 
-@application.route("/mars")
+@application.route("/venus")
 def hello_venus():
     return "<p>Hello, venus!</p>"
 
