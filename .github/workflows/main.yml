@@ -52,6 +52,7 @@ jobs:
         run:  echo "CI Pipeline part finished successfully"
         
   my_cd_pipeline:
+    needs: my_ci_pipeline
     runs-on: ubuntu-latest
     
     steps:
