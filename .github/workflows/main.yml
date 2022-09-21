@@ -16,27 +16,27 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build:
-#       my_ci_pipeline:
-        runs-on: ubuntu-latest
+#   build:
+  my_ci_pipeline:
+    runs-on: ubuntu-latest
         
-        steps:
-          - name: Git clone our repository
-            uses: actions/checkout@v1
+    steps:
+      - name: Git clone our repository
+        uses: actions/checkout@v1
             
-          - name: Create ZIP deployment package
-            run : zip -r ${{ env.DEPLOY_PACKAGE_NAME}} ./ -x *.git*
+      - name: Create ZIP deployment package
+        run : zip -r ${{ env.DEPLOY_PACKAGE_NAME}} ./ -x *.git*
             
-          - name: Configure AWS Credentials
-            uses: aws-actions/configure-aws-credentials@v1
-            with: 
-                aws-acccess-key-id:     ${{secrets.MY_AWS_ACCESS_KEY}}
-                aws-secret-access-key:  ${{secrets.MY_AWS_SECRET_KEY}}
-                aws-region:             ${{env.AWS_REGION}}
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with: 
+          aws-acccess-key-id:     ${{secrets.MY_AWS_ACCESS_KEY}}
+          aws-secret-access-key:  ${{secrets.MY_AWS_SECRET_KEY}}
+          aws-region:             ${{env.AWS_REGION}}
 
-          - name: Copy Deployment Package to S3
-            run:  aws s3 cp ${{ env.DEPLOY_PACKAGE_NAME }} s3://${{ env.EB_PACKAGE_S3_BUCKET_NAME}}/
+      - name: Copy Deployment Package to S3
+        run :  aws s3 cp ${{ env.DEPLOY_PACKAGE_NAME }} s3://${{ env.EB_PACKAGE_S3_BUCKET_NAME}}/
             
-          - name: Print message on completion 
-            run:  echo "CI Pipeline part finished successfully"
+      - name: Print message on completion 
+        run:  echo "CI Pipeline part finished successfully"
         
