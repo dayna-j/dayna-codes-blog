@@ -6,9 +6,10 @@ env:
   EB_APPLICATION_NAME       : "Dayna Codes blog"
   EB_ENVIRONMENT_NAME       : "Daynacodesblog-env-1"
   DEPLOY_PACKAGE_NAME       : "deployment-${{ github.sha }}.zip"
-  AWS_REGION                : "us-west-2"
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_DEFAULT_REGION: us-west-1
+  AWS_DEFAULT_OUTPUT: json
   
 # Controls when the workflow will run
 on:
