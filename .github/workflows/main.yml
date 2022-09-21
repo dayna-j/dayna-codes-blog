@@ -5,7 +5,7 @@ permissions:
   id-token: write # required to use OIDC authentication
   contents: read # required to checkout the code from the repo
 env: 
-  EB_PACKAGE_S3_BUCKET_NAME : "dayna-codes-deployments"
+  EB_PACKAGE_S3_BUCKET_NAME : "dayna-codes-blog-deployments"
   EB_APPLICATION_NAME       : "Dayna Codes blog"
   EB_ENVIRONMENT_NAME       : "Daynacodesblog-env-1"
   DEPLOY_PACKAGE_NAME       : "deployment-${{ github.sha }}.zip"
