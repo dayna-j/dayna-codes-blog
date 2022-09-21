@@ -14,7 +14,7 @@ def hello_earth():
 
 @application.route("/mars")
 def hello_mars():
-    return "<p>Hello, mars!</p>"
+    return "<p>Hello, mars</p>"
 
 if __name__ == "__main__":
     application.run(port=5000, debug=True)
