@@ -16,5 +16,9 @@ def hello_earth():
 def hello_mars():
     return "<p>Hello, mars!</p>"
 
+@application.route("/mars")
+def hello_venus():
+    return "<p>Hello, venus!</p>"
+
 if __name__ == "__main__":
     application.run(port=5000, debug=True)
