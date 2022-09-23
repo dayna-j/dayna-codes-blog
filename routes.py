@@ -2,7 +2,7 @@ from application import application
 
 @application.route("/")
 def hello_world():
-    return "<p>Hello, Wordld!</p>"
+    return "<p>Hello, World!</p>"
 
 @application.route("/earth")
 def hello_earth():
