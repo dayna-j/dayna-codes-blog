@@ -6,7 +6,7 @@ def hello_world():
 
 @application.route("/earth")
 def hello_earth():
-    return "<p>Hello, earth!</p>"
+    return "<p>Hello, earth</p>"
 
 @application.route("/mars")
 def hello_mars():
