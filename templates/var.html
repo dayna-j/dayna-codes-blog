@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--  Meta  -->
+  <meta charset="UTF-8">
+  <title>Dayna Codes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!--  Styles  -->
+  <link rel="stylesheet" href="{{url_for('static',filename='styles/main.css') }}">
+</head>
+  
+<body>
+  <div id='body-wrapper'>
+    <header>
+      This is my header.
+    </header>
+    
+    <!-- <article>
+      <div class="article-wrapper">
+        <a href="article.html">
+          <span class="title">How to be a really good programmer part 1
+          </span>
+          <span>This is the first article about how to be a really good programmer.  You should read it right away.  Go read it now dude.  why are you still here. bl ajsjjsfjsdljlsdfsdl jsjjsfjsdljlsdfsdl jsjjsfjsdljlsdfsdl jsjjsfjsdljlsdfsdl jsjjsfjsdljlsdfsdl 
+          </span>
+        </a>
+      </div>
+    </article> -->
+    {% for key,value in var.items() %}
+    <p>{{key}}: {{value}}</p>
+    {% endfor %}
+    
+    <footer></footer>
+  </div>    
+</body>
+  
+</html>

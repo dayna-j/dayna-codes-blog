@@ -1,8 +1,9 @@
 from application import application
+from flask import render_template
 
 @application.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+def index():
+    return render_template('index.html')
 
 @application.route("/earth")
 def hello_earth():
