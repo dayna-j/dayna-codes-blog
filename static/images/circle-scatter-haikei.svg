@@ -1,0 +1,9 @@
+<svg id="visual" viewBox="0 0 1600 900" width="1600" height="900" xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+    <rect x="0" y="0" width="1600" height="900" fill="#001220"></rect>
+    <g fill="#58131e">
+        <circle r="241" cx="1405" cy="662"></circle>
+        <circle r="106" cx="763" cy="115"></circle>
+        <circle r="140" cx="398" cy="598"></circle>
+    </g>
+</svg>
