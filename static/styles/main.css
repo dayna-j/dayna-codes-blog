@@ -67,7 +67,35 @@ header{
   padding-bottom: 5px;
 }
 
+header .header-top{
+  display: flex;
+  justify-content: space-between; 
+}
+
+header .header-top .logo-container{
+  color: white;
+  font-size: 2em;
+/*   padding: 10px; */
+  padding-bottom: 10px;
+}
+
+header input[type='text']{
+  font-size: 1.1em;
+  display: inline;
+  border-radius: 10px;
+  background-color: whitesmoke;
+/*   margin: 5px; */
+}
+
+::placeholder{
+  color: grey;
+  text-align: right;
+  padding-right: 5px;
+}
+
 header nav{
+/*   background-color: red; */
+  display: block;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   padding: 2px;
@@ -88,16 +116,10 @@ a{
 /*   font-size:1.8rem; */
 }
 
-
-div{
-/*   width: 100%; */
-/*   height: 100%; */
-/*   background-color:#2a31ad; */
-  
-}
-
 article:hover{
-  background-color:#222933;
+  background-color:#22293338;
+  border-radius: 10px;
+  transition: .35s;
 }
 
 article{
@@ -105,10 +127,12 @@ article{
 /*   transition: .3s; */
   border-left: 3px solid pink;
 /*   margin-left: 10px; */
+  padding-top: 5px;
   padding-left: 20px;
+  padding-bottom: 5px;
 }
 
-article .wrapper{
+.article-wrapper:hover{
 /*   background-color: white; */
 /*   height: 100%; */
 /*   width: 100%; */
@@ -142,9 +166,18 @@ article .date{
   font-size: .7em;
   display: inline-block;
   text-align: right;
+  padding-top: 20px;
+/*   padding-bottom: 20px; */  
   padding: 5px;
+  margin-bottom: 7px;
   margin-top: 7px;
   border: 1px solid grey;
+  
+}
+
+article .article-footer{
+  width: 100%;
+  display: block;
 }
 
 footer{
@@ -171,4 +204,5 @@ footer{
   column-gap: 50px;
   font-size: 1em;
   font-weight: 300;
+/*   padding-bottom: 5px; */
 }
